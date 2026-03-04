@@ -1,0 +1,17 @@
+class Solution {
+    int missingNum(int arr[]) {
+        int n = arr.length + 1;
+        
+        int total = 0;
+        for(int i = 1; i <= n; i++) {
+            total += i;
+        }
+        
+        int arraySum = 0;
+        for(int num : arr) {
+            arraySum += num;
+        }
+        
+        return total - arraySum;
+    }
+}
