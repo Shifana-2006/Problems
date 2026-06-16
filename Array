@@ -57,3 +57,147 @@ class Main{
         }
 }
 }
+
+//4.Second Largest
+
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int first=Integer.MIN_VALUE;
+        int second=Integer.MIN_VALUE;
+        
+        for(int i=0;i<n;i++){
+            if(arr[i]>first){
+            second=first;
+            first=arr[i];
+        }
+        else{
+            second=arr[i];
+        }
+        }
+        System.out.print(second);
+}
+}
+
+//5.Sum of the array
+
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        
+        int sum=0;
+        for(int i=0;i<n;i++){
+            sum=sum+arr[i];
+        }
+        System.out.print(sum);
+}
+}
+
+//6.Sort an array //swap with nested loop or Arrays.sort(arr)
+
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        
+        Arrays.sort(arr);
+
+        /* for(int i = 0; i < n - 1; i++) {
+            for(int j = i + 1; j < n; j++) {
+                if(arr[i] > arr[j]) {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }*/
+        
+        for(int i=0;i<n;i++){
+            System.out.print(arr[i]+" ");
+        }
+}
+}
+
+//7. Find and Print duplicate
+// first method
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        
+        for(int i=0;i<n;i++){
+            for(int j=i+1;j<n;j++){
+            if(arr[i]==arr[j]){
+            System.out.print(arr[i]+" ");
+        }
+        }
+    }
+}
+}
+//optimised method to print duplicate
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        
+      HashSet<Integer> set=new HashSet<>();
+      for(int num:arr){
+          if(set.contains(num)){ //duplicates
+              System.out.print(num+" ");
+          }
+          else{
+              set.add(num); //non duplicates
+          }
+      }
+}
+}
+
+
+//Print Non duplicates(Remove duplicates)
+
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        
+      HashSet<Integer> set=new HashSet<>();
+      for(int i=0;i<n;i++){
+          set.add(arr[i]);
+      }
+      System.out.print(set);
+          
+}
+}
+
