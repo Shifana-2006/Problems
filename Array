@@ -295,3 +295,55 @@ class Main {
     }
 }
 
+//9.Missing element from 1 to N
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int size=sc.nextInt();
+        int[] arr=new int[size];
+        for(int i=0;i<size;i++){
+            arr[i]=sc.nextInt();
+        }
+        int actualsum=0;
+        
+        for(int i=0;i<size;i++){
+            actualsum+=arr[i];
+        }
+        
+        int n=size+1;
+        int expectedsum=n*(n+1)/2;
+           
+        int  missing=expectedsum-actualsum;
+        
+        System.out.print(missing);
+        
+    }
+}
+
+//10.Maximum contiguous subarray sum (kadane's alg - continue or start new)
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int size=sc.nextInt();
+        int[] arr=new int[size];
+        for(int i=0;i<size;i++){
+            arr[i]=sc.nextInt();
+        }
+        //[5,4,-1,7,8]
+        int currentsum=arr[0];
+        int maxsum=arr[0];
+        
+        for(int i=1;i<size;i++){
+            currentsum=Math.max(arr[i],currentsum+arr[i]);
+            maxsum=Math.max(maxsum,currentsum);
+        }
+        System.out.print(maxsum);
+    }
+}
+
+
+
