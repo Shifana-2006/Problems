@@ -134,3 +134,22 @@ public class Main{
         
     }
 }
+
+//import java.util.*;
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        StringBuilder res=new StringBuilder();
+        String str=sc.nextLine();
+        char[] arr=str.toCharArray();
+        HashSet<Character> set=new HashSet<>();
+        for(int i=0;i<arr.length;i++){
+            char ch=str.charAt(i);
+            if(!set.contains(ch))
+            res.append(ch);
+            set.add(ch);
+        }
+        System.out.println(res.toString());
+        System.out.println(set);
+    }
+}
