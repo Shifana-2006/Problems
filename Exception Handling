@@ -76,3 +76,53 @@ public class Main
 		 System.out.print("Program Ended");
 	}
 }
+
+//throws
+
+import java.util.*;
+
+class Demo {
+    void test() throws Exception {
+        int a = 10 / 0;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Demo obj = new Demo();
+
+        try {
+            obj.test();
+        } catch (Exception e) {
+            System.out.print(e);
+        }
+    }
+}
+
+//Custom Exception Handling
+
+import java.util.*;
+
+class NotValidException extends Exception {
+    NotValidException(String s) {
+        super(s);//stored string message pass to the parentcls
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        try {
+            int age = sc.nextInt();
+
+            if (age < 18) {
+                throw new NotValidException("Your Age should be greater than 18");
+            }
+            
+        } catch (NotValidException e) {
+            System.out.println(e.getMessage());
+        }
+//we acn create another standard ctach cls to display the other errors
+    }
+}
