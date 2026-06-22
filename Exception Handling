@@ -1,0 +1,32 @@
+/*Exception-To handle runtime error*/ 
+
+Compile time error → before running (syntax mistake)
+Runtime error → while running (program stops unexpectedly)
+
+/*Compile time error -  like missing semicolon 
+run time error :
+try block - for critical statement
+catch block - immediate after try block ,it executes(when try block has error otherwise not)
+finally - executes always(if error occurs or not)
+throw - manually creates
+throws - method may give an exception to the caller.
+*/
+
+
+//try
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+		  try{
+		  int a=sc.nextInt();
+		  }
+		  catch(Exception e){
+		      System.out.print(e);
+		  }
+	}
+}
+
+//
