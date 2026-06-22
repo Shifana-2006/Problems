@@ -123,6 +123,6 @@ public class Main {
         } catch (NotValidException e) {
             System.out.println(e.getMessage());
         }
-//we acn create another standard ctach cls to display the other errors
+//we can also create another standard catch cls to display the other errors
     }
 }
