@@ -21,7 +21,7 @@ public class Main
 	public static void main(String[] args) {
 	    Scanner sc=new Scanner(System.in);
 		  try{
-		  int a=sc.nextInt();
+		  int a=sc.nextInt(); //if i enter string 
 		  }
 		  catch(Exception e){
 		      System.out.print(e);
@@ -29,4 +29,24 @@ public class Main
 	}
 }
 
-//
+//try & catch & finally
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+		  try{
+		  int a=10/0;
+		  }
+		  catch(ArithmeticException e){
+		      System.out.println("Exception : " +e);
+		  }
+		  
+		  finally{
+		      System.out.println("Program never stops!!");
+		  }
+		 
+	}
+}
