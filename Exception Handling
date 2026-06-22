@@ -7,13 +7,13 @@ Runtime error → while running (program stops unexpectedly)
 run time error :
 try block - for critical statement
 catch block - immediate after try block ,it executes(when try block has error otherwise not)
-finally - executes always(if error occurs or not)
+finally - executes always(whether error occurs or not) [use for file close,release,opem]
 throw - manually creates
 throws - method may give an exception to the caller.
 */
 
 
-//try
+//try & catch
 import java.util.*;
 
 public class Main
