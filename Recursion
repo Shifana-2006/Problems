@@ -1,0 +1,40 @@
+//Factorial
+
+import java.util.*;
+public class Main{
+    public static int func(int n){
+        if(n==0)
+        return 1;
+        else
+        return n*func(n-1);
+        
+    }
+
+    public static void main(String[] args){
+       System.out.print(func(5));
+       //Scanner sc=new Scanner(System.in);
+       //int n=sc.nextInt();
+       //int result=func(n);
+       //System.out.print(result);
+    }
+}
+
+//Fibonacci
+
+import java.util.*;
+public class Main{
+    public static int func(int n){
+        if(n<=1)
+        return n;
+        else
+        return func(n-1)+func(n-2);
+        
+    }
+
+    public static void main(String[] args){
+        int n=4;
+       for(int i=0;i<=n;i++){
+       System.out.print(func(i)+" ");
+       }
+    }
+}
