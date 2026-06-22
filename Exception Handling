@@ -1,5 +1,8 @@
 /*Exception-To handle runtime error*/ 
 
+/* Checked Exception - when we know the error at the compile time
+Unchecked Exception - when we know the error at the run time */
+
 Compile time error → before running (syntax mistake)
 Runtime error → while running (program stops unexpectedly)
 
@@ -48,5 +51,28 @@ public class Main
 		      System.out.println("Program never stops!!");
 		  }
 		 
+	}
+}
+
+//throw
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+		  try{
+		  int age=sc.nextInt();
+		  if(age<1){
+		      throw new Exception("Age must be greater than 1");
+		  }
+		  
+		  }
+		  catch(Exception e){
+		      System.out.println(e);
+		  }
+		  
+		 System.out.print("Program Ended");
 	}
 }
