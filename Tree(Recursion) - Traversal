@@ -1,0 +1,78 @@
+/*level order traversal - Queue + loop
+
+public static void levelOrder(Node root) {
+    if (root == null) return;
+
+    Queue<Node> queue = new LinkedList<>();
+    queue.add(root);
+
+    while (!queue.isEmpty()) {
+        Node current = queue.poll();
+        System.out.print(current.data + " ");
+
+        if (current.left != null)
+            queue.add(current.left);
+
+        if (current.right != null)
+            queue.add(current.right);
+    }
+}
+
+/*Preorder - root,left,right
+
+public static void preorder(Node root) {
+    if (root == null) return;
+
+    System.out.print(root.data + " ");
+
+    preorder(root.left);
+    preorder(root.right);
+}
+
+/*Inorder - left,root,right
+
+
+public static void inorder(Node root) {
+    if (root == null) return;
+
+    inorder(root.left);
+
+    System.out.print(root.data + " ");
+
+    inorder(root.right);
+}
+
+/*Postorder - left,right,root
+
+
+public static void postorder(Node root) {
+    if (root == null) return;
+
+    postorder(root.left);
+    postorder(root.right);
+
+    System.out.print(root.data + " ");
+}
+
+
+for this ques :  10, 5, 15, 2, 7, 12, 20
+
+        10
+       /  \
+      5    15
+     / \   / \
+    2   7 12  20
+
+
+Preorder: 10, 5, 2, 7, 15, 12, 20
+
+
+
+Inorder: 2, 5, 7, 10, 12, 15, 20
+
+
+
+Postorder: 2, 7, 5, 12, 20, 15, 10
+
+
+Levelorder: 10, 5, 15, 2, 7, 12, 20
