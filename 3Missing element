@@ -2,7 +2,7 @@ class Solution {
     int missingNum(int arr[]) {
         int n = arr.length + 1;
         
-        int total = 0;
+        int total = 0;   // n*(n+1)/2
         for(int i = 1; i <= n; i++) {
             total += i;
         }
