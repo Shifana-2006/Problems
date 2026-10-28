@@ -1,16 +1,24 @@
+Exception and Error belongs to THROWBABLE HIERARCHY
+
 /*Exception-To handle runtime error*/ 
+/*Error -to handle jvm problems(like outofmmemoryerror)*/
+
 
 /* Checked Exception - when we know the error at the compile time
-Unchecked Exception - when we know the error at the run time */
+(EX : IOException(want to read a file but file may not exist) , SQLException, ClassNotFoundException)
+
+/* Unchecked Exception - when we know the error at the run time
+(Ex : ArrayIndexOutOfBoundException,ArithmeticException,NullPointerException,NumberFormatException,InputMismatchException,IllegalArgumentException)(RuntimeException)
+
 
 Compile time error → before running (syntax mistake)
 Runtime error → while running (program stops unexpectedly)
 
 /*Compile time error -  like missing semicolon 
 run time error :
-try block - for critical statement
-catch block - immediate after try block ,it executes(when try block has error otherwise not)
-finally - executes always(whether error occurs or not) [use for file close,release,open]
+try block - for critical statement(expect prblm may come)
+catch block - immediate after try block ,it executes(when try block has error otherwise not)(handle)
+finally - executes always(whether error occurs or not) [use for file close,release,open](completion scenarios)
 throw - manually creates
 throws - method may give an exception to the caller.
 */
@@ -65,7 +73,7 @@ public class Main
 		  try{
 		  int age=sc.nextInt();
 		  if(age<1){
-		      throw new Exception("Age must be greater than 1");
+		      throw new Exception("Age must be greater than 1");//new ..IllegalArgumentException
 		  }
 		  
 		  }
@@ -96,6 +104,14 @@ class Main {
         } catch (Exception e) {
             System.out.print(e);
         }
+    }
+}
+
+//import java.io.IOException;
+
+public class Main {
+    static void readFile() throws IOException {
+        // File-reading code may throw IOException
     }
 }
 
