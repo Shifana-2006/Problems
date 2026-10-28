@@ -19,8 +19,8 @@ run time error :
 try block - for critical statement(expect prblm may come)
 catch block - immediate after try block ,it executes(when try block has error otherwise not)(handle)
 finally - executes always(whether error occurs or not) [use for file close,release,open](completion scenarios)
-throw - manually creates
-throws - method may give an exception to the caller.
+throw - manually creates[explicitly throws an exception]
+throws - method may give an exception to the caller[declares possible exceptions in a method signature]
 */
 
 
